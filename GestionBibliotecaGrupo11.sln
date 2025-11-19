@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{5A5CE235-49E6-443D-9A6C-ED15762A66DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModeloDominio", "ClassLibrary1\ModeloDominio.csproj", "{5A5CE235-49E6-443D-9A6C-ED15762A66DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{FB9E2E12-785B-4A51-958B-148D81FE9A63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{4E804F5D-6137-470B-A440-B72ED6E58701}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5A5CE235-49E6-443D-9A6C-ED15762A66DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5CE235-49E6-443D-9A6C-ED15762A66DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A5CE235-49E6-443D-9A6C-ED15762A66DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9E2E12-785B-4A51-958B-148D81FE9A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9E2E12-785B-4A51-958B-148D81FE9A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9E2E12-785B-4A51-958B-148D81FE9A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9E2E12-785B-4A51-958B-148D81FE9A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E804F5D-6137-470B-A440-B72ED6E58701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E804F5D-6137-470B-A440-B72ED6E58701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E804F5D-6137-470B-A440-B72ED6E58701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E804F5D-6137-470B-A440-B72ED6E58701}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
