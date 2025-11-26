@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModeloDominio.Libro;
 
 namespace Persistencia.Transformers
 {
@@ -14,7 +15,7 @@ namespace Persistencia.Transformers
             {
                 return new LibroDato(libro.ISBN, libro.Titulo, libro.Autor, libro.Editorial, libro.Año, libro.NSS);
             }
-            else if (doc is Audiolibro audio)
+            else if (doc is AudioLibro audio)
             {
                 return new AudiolibroDato(audio.ISBN, audio.Titulo, audio.Autor, audio.Editorial, audio.Año, audio.NSS,
                                           audio.Formato, audio.Duracion);
