@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class Documento
+    internal abstract class Documento
     {
         private String isbn;
         private String titulo;
@@ -15,14 +15,13 @@ namespace ClassLibrary1
         private int anio;
 
 
-        public Documento(string isbn, string titulo, string autor, string editorial, int anio, List<Ejemplar> ejemplares)
+        public Documento(string isbn, string titulo, string autor, string editorial, int anio)
         {
             this.isbn = isbn;
             this.titulo = titulo;
             this.autor = autor;
             this.editorial = editorial;
             this.anio = anio;
-            this.ejemplares = ejemplares;
         }
 
         public String ISBN { get { return isbn; } }
@@ -30,8 +29,6 @@ namespace ClassLibrary1
         public String Autor { get { return autor; } }
         public String Editorial { get { return editorial; } }
         public int Anio { get { return anio; } }
-        public List<Ejemplar > Ejemplares { get { return ejemplares; } }
-
-        public 
+   
     }
 }

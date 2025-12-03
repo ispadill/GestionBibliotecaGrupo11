@@ -5,32 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibrary1
-{   
+{
     internal class Prestamo
     {
         private int id;
         private DateTime fechaInicio;
         private DateTime fechaFin;
         private EstadoPrestamo estado;
-        private PersonalSala responsable;
-        private List<Ejemplar> ejemplaresPrestados;
 
-        public Prestamo(int id, DateTime fechaInic, DateTime fechaFin, EstadoPrestamo ep, PersonalSala responsable, List<Ejemplar> ejemplares) { 
+        private Usuario usuario;
+        private PersonalSala personal;
+        private List<Ejemplar> ejemplares;
+
+        public Prestamo(int id, Usuario usuario, PersonalSala personal,
+                        DateTime fechaInicio, DateTime fechaFin, EstadoPrestamo estado)
+        {
             this.id = id;
+            this.usuario = usuario;
+            this.personal = personal;
             this.fechaInicio = fechaInicio;
             this.fechaFin = fechaFin;
-            this.estado = ep;
-            this.responsable = responsable;
-            this.ejemplaresPrestados = ejemplares;
+            this.estado = estado;
+
+            this.ejemplares = new List<Ejemplar>();
         }
 
-        public int ID { get { return id; } set { id = value; } }
+        public int Id { get { return id; } }
         public DateTime FechaInicio { get { return fechaInicio; } set { fechaInicio = value; } }
         public DateTime FechaFin { get { return fechaFin; } set { fechaFin = value; } }
-        public EstadoPrestamo EstadoPrestamo { get { return estado; } set { estado = value; } }    
-        public PersonalSala Responsable { get { return responsable; } set { responsable = value; } }
+        public EstadoPrestamo Estado { get { return estado; } set { estado = value; } }
 
+        public Usuario Usuario { get { return usuario; } }
+        public PersonalSala Personal { get { return personal; } }
 
-
+        public List<Ejemplar> Ejemplares { get { return ejemplares; } }
     }
 }

@@ -9,10 +9,11 @@ namespace ClassLibrary1
 {
     internal class Libro : Documento
     {
-        private static readonly int DIAS_PRESTADO = 15;
-        public Libro()
-        {
+        public const int DIAS_PRESTAMO = 15;
 
+        public Libro(string isbn, string titulo, string autor, string editorial, int anio)
+            : base(isbn, titulo, autor, editorial, anio)
+        {
         }
     }
 }
