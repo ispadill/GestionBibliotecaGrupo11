@@ -14,10 +14,8 @@ namespace Persistencia.BDs
         // -------------------- CREATE --------------------
         public static void CREATE(Documento doc)
         {
-            // Convertimos a DocumentoDato según el tipo
             DocumentoDato dd = TransformersDocumento.DocumentoADato(doc);
 
-            // Añadimos a la tabla simulada
             BD.TablaDocumento.Add(dd);
         }
 

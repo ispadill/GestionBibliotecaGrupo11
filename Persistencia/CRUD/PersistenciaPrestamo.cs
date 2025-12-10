@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using ClassLibrary1;
 using Persistencia.Datos;
-using Persistencia.Claves; // Para ClavePrestamoEjemplar
+using Persistencia.Claves;
 using Persistencia.Transformers;
 
 namespace Persistencia.CRUD

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using ClassLibrary1;
 using Persistencia.Datos;
-using Persistencia.Claves; // Namespace de ClaveEjemplar
+using Persistencia.Claves; 
 using Persistencia.Transformers;
 
 namespace Persistencia.CRUD
@@ -13,7 +13,7 @@ namespace Persistencia.CRUD
         {
             EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);
             ed.NSS = nssPersonal;
-            ed.Estado = true; // Disponible al crear
+            ed.Estado = true; 
 
             if (!BD.TablaEjemplar.Contains(ed.Id))
                 BD.TablaEjemplar.Add(ed);
@@ -47,7 +47,7 @@ namespace Persistencia.CRUD
             EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);
             if (BD.TablaEjemplar.Contains(ed.Id))
             {
-                // Mantenemos el NSS original
+
                 ed.NSS = BD.TablaEjemplar[ed.Id].NSS;
                 BD.TablaEjemplar.Remove(ed.Id);
                 BD.TablaEjemplar.Add(ed);

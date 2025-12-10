@@ -1,7 +1,7 @@
 ﻿using ClassLibrary1;
-using Persistencia.Claves; // Namespace nuevo por la carpeta
-using Persistencia.Datos;  // Namespace nuevo por la carpeta
-using Persistencia.BDs;    // Para poder leer el Documento asociado
+using Persistencia.Claves; 
+using Persistencia.Datos;  
+using Persistencia.BDs;    
 
 namespace Persistencia.Transformers
 {

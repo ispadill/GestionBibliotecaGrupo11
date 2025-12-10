@@ -1,7 +1,7 @@
 ﻿using ClassLibrary1;
 using Persistencia.Datos;
 using Persistencia.BDs;
-using Persistencia.CRUD; // Necesitamos leer Usuario y Personal
+using Persistencia.CRUD; 
 
 namespace Persistencia.Transformers
 {

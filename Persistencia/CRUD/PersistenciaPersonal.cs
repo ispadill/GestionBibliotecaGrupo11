@@ -4,7 +4,7 @@ using ClassLibrary1;
 using Persistencia.Datos;
 using Persistencia.Transformers;
 
-namespace Persistencia.BDs // OJO: Si decidiste usar la carpeta CRUD, cambia esto a namespace Persistencia.CRUD
+namespace Persistencia.BDs 
 {
     public static class PersistenciaPersonal
     {
@@ -33,13 +33,10 @@ namespace Persistencia.BDs // OJO: Si decidiste usar la carpeta CRUD, cambia est
         // ------------------- UPDATE -------------------
         public static void UPDATE(PersonalBiblioteca p)
         {
-            // Verificamos si existe antes de intentar actualizar
             if (BD.TablaPersonal.Contains(p.NSS))
             {
-                // Borramos el registro viejo (CORREGIDO: antes decía TablaDocumento)
                 BD.TablaPersonal.Remove(p.NSS);
 
-                // Añadimos el nuevo con los datos actualizados
                 CREATE(p);
             }
             else
@@ -57,8 +54,6 @@ namespace Persistencia.BDs // OJO: Si decidiste usar la carpeta CRUD, cambia est
             }
         }
 
-        // ------------------- EXTRA: LOGIN -------------------
-        // Necesario para verificar usuario y contraseña al entrar
         public static PersonalBiblioteca LOGIN(string username, string password)
         {
             foreach (var dato in BD.TablaPersonal)
