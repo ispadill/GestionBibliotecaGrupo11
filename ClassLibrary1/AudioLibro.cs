@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class AudioLibro : Documento
+    public class AudioLibro : Documento
     {
         public const int DIAS_PRESTAMO = 10;
 

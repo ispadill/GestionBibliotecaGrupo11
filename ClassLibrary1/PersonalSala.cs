@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class PersonalSala : PersonalBiblioteca
+    public class PersonalSala : PersonalBiblioteca
     {
-        private static string nss;
-        private static string username;
-        private static string password;
-        private static string rol;
-        public PersonalSala() : base(nss, username, password, rol)
+        public PersonalSala(string nss, string username, string password, string rol)
+            : base(nss, username, password, rol)
         {
-            
-        }   
 
+        }
     }
 }

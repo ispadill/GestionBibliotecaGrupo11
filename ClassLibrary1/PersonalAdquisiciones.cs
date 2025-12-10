@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class PersonalAdquisiciones : PersonalBiblioteca
+    public class PersonalAdquisiciones : PersonalBiblioteca
     {
-        private static string nss;
-        private static string username;
-        private static string password;
-        private static string rol;
-        public PersonalAdquisiciones() : base(nss, username, password, rol)
+        public PersonalAdquisiciones(string nss, string username, string password, string rol)
+            : base(nss, username, password, rol)
         {
 
         }

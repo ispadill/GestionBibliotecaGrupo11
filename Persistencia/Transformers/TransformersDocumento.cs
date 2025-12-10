@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ModeloDominio.Libro;
+using ClassLibrary1;
+using Persistencia.Datos;
 
 namespace Persistencia.Transformers
 {
@@ -13,17 +14,14 @@ namespace Persistencia.Transformers
         {
             if (doc is Libro libro)
             {
-                return new LibroDato(libro.ISBN, libro.Titulo, libro.Autor, libro.Editorial, libro.Año, libro.NSS);
+                return new LibroDato(libro.ISBN, libro.Titulo, libro.Autor, libro.Editorial, libro.Anio, libro.NSS);
             }
             else if (doc is AudioLibro audio)
             {
-                return new AudiolibroDato(audio.ISBN, audio.Titulo, audio.Autor, audio.Editorial, audio.Año, audio.NSS,
+                return new AudiolibroDato(audio.ISBN, audio.Titulo, audio.Autor, audio.Editorial, audio.Anio, audio.NSS,
                                           audio.Formato, audio.Duracion);
             }
-            else
-            {
-                return new DocumentoDato(doc.ISBN, doc.Titulo, doc.Autor, doc.Editorial, doc.Año, doc.NSS);
-            }
+            return null;
         }
 
         public static Documento DatoADocumento(DocumentoDato dd)
@@ -34,13 +32,9 @@ namespace Persistencia.Transformers
             }
             else if (dd is AudiolibroDato ad)
             {
-                return new Audiolibro(ad.Id, ad.Titulo, ad.Autor, ad.Editorial, ad.Año, ad.NSS, ad.Formato, ad.Duracion);
+                return new AudioLibro(ad.Id, ad.Titulo, ad.Autor, ad.Editorial, ad.Año, ad.NSS, ad.Formato, ad.Duracion);
             }
-            else
-            {
-                return new Documento(dd.Id, dd.Titulo, dd.Autor, dd.Editorial, dd.Año, dd.NSS);
-            }
+            return null;
         }
     }
 }
-                                                                                                                                                                                                                                                                                             

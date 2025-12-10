@@ -1,4 +1,7 @@
-﻿namespace Persistencia
+﻿using Persistencia.Claves;
+using Persistencia.Datos;
+
+namespace Persistencia
 {
     internal static class BD
     {

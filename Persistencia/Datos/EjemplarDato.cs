@@ -1,4 +1,6 @@
-﻿namespace Persistencia
+﻿using Persistencia.Claves;
+
+namespace Persistencia.Datos
 {
     internal class EjemplarDato : Entity<ClaveEjemplar>
     {

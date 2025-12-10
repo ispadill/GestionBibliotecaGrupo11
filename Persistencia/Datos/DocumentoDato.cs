@@ -1,4 +1,4 @@
-﻿namespace Persistencia
+﻿namespace Persistencia.Datos
 {
     internal class DocumentoDato : Entity<string>
     {

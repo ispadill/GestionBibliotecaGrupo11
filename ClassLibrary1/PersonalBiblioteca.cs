@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal abstract class PersonalBiblioteca
+    public abstract class PersonalBiblioteca
     {
         private string nss;
         private string username;

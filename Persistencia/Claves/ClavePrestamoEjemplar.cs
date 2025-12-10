@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistencia
+namespace Persistencia.Claves
 {
     internal class ClavePrestamoEjemplar : IEquatable<ClavePrestamoEjemplar>
     {

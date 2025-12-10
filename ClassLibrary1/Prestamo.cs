@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class Prestamo
+    public class Prestamo
     {
         private int id;
         private DateTime fechaInicio;

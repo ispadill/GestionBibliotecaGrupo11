@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal abstract class Documento
+    public abstract class Documento
     {
         private String isbn;
         private String titulo;
