@@ -20,6 +20,9 @@ namespace ClassLibrary1
         public string Dni { 
             get { return dni; } 
         }
-
+        public string Nombre
+        {
+            get { return nombre; }
+        }
     }
 }

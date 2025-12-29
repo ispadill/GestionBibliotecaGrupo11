@@ -7,14 +7,15 @@ using ClassLibrary1;
 using Persistencia.Datos;
 using Persistencia.Transformers;
 
-namespace Persistencia.BDs
+namespace Persistencia.CRUD
 {
     public static class PersistenciaDocumento
     {
         // -------------------- CREATE --------------------
-        public static void CREATE(Documento doc)
+        public static void CREATE(Documento doc, string nss)
         {
             DocumentoDato dd = TransformersDocumento.DocumentoADato(doc);
+            dd.NSS = nss;
 
             BD.TablaDocumento.Add(dd);
         }
@@ -26,10 +27,10 @@ namespace Persistencia.BDs
 
             if (BD.TablaDocumento.Contains(dd.Id))
             {
+                dd.NSS = BD.TablaDocumento[dd.Id].NSS;
                 BD.TablaDocumento.Remove(dd.Id);
+                BD.TablaDocumento.Add(dd);
             }
-
-            CREATE(doc);
         }
 
         // -------------------- DELETE --------------------

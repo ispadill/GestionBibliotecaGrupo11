@@ -21,7 +21,7 @@ namespace Persistencia.CRUD
                 throw new Exception("El ejemplar ya existe.");
         }
 
-        public static Ejemplar READ(string isbn, int codigo)
+        public static Ejemplar READ(string isbn, string codigo)
         {
             ClaveEjemplar clave = new ClaveEjemplar(isbn, codigo);
             if (BD.TablaEjemplar.Contains(clave))

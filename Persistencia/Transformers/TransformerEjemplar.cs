@@ -1,7 +1,7 @@
 ﻿using ClassLibrary1;
 using Persistencia.Claves; 
-using Persistencia.Datos;  
-using Persistencia.BDs;    
+using Persistencia.Datos; 
+using Persistencia.CRUD;
 
 namespace Persistencia.Transformers
 {
@@ -9,8 +9,7 @@ namespace Persistencia.Transformers
     {
         public static EjemplarDato EjemplarADato(Ejemplar e)
         {
-            int codigoInt = int.Parse(e.Codigo);
-            ClaveEjemplar clave = new ClaveEjemplar(e.Documento.ISBN, codigoInt);
+            ClaveEjemplar clave = new ClaveEjemplar(e.Documento.ISBN, e.Codigo);
 
             return new EjemplarDato(clave, !e.Prestado, "");
         }

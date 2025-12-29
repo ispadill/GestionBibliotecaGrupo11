@@ -4,7 +4,7 @@ using ClassLibrary1;
 using Persistencia.Datos;
 using Persistencia.Transformers;
 
-namespace Persistencia.BDs 
+namespace Persistencia.CRUD 
 {
     public static class PersistenciaPersonal
     {

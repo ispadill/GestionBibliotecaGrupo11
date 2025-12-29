@@ -1,6 +1,5 @@
 ﻿using ClassLibrary1;
 using Persistencia.Datos;
-using Persistencia.BDs;
 using Persistencia.CRUD; 
 
 namespace Persistencia.Transformers

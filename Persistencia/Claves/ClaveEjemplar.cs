@@ -9,9 +9,9 @@ namespace Persistencia.Claves
     internal class ClaveEjemplar : IEquatable<ClaveEjemplar>
     {
         public string ISBN { get; }
-        public int Codigo { get; }
+        public string Codigo { get; }
 
-        public ClaveEjemplar(string isbn, int codigo)
+        public ClaveEjemplar(string isbn, string codigo)
         {
             ISBN = isbn;
             Codigo = codigo;
@@ -25,7 +25,7 @@ namespace Persistencia.Claves
                    Codigo == other.Codigo;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object obj) //tengo duda de si esto esta bien
         {
             return Equals(obj as ClaveEjemplar);
         }
