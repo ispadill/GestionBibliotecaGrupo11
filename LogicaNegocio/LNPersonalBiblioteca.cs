@@ -23,7 +23,15 @@ namespace LogicaNegocio
         public static LNPersonalBiblioteca IniciarSesion(string usuario, string contra)
         {
             PersonalBiblioteca p = PersistenciaPersonal.LOGIN(usuario, contra);
-            return p;
+            if (p is PersonalSala pSala)
+            {
+                return new LNPersonalSala(pSala);
+            }
+            if(p is PersonalAdquisiciones pAdq)
+            {
+                return new LNPersonalAdquisiciones(pAdq);
+            }
+            return null;
         }
     }
 }
