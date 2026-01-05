@@ -19,16 +19,21 @@ namespace Presentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // --- DATOS DE PRUEBA ---
-            // Añadimos un trabajador de Sala
-            BD.TablaPersonal.Add(new PersonalDato("123", "Pepe Sala", "1234", "SALA"));
-            BD.TablaPersonalSala.Add(new PersonalSalaDato("123", "Pepe Sala", "1234", "SALA"));
-            // Añadimos un trabajador de Adquisiciones
-            BD.TablaPersonal.Add(new PersonalDato("456", "Ana Adq", "4567", "ADQUISICIONES"));
-            BD.TablaPersonalAdquisiciones.Add(new PersonalAdquisicionesDato("456", "Ana Adq", "4567", "ADQUISICIONES"));
+            /// --- DATOS DE PRUEBA  ---
+            var pepe = new PersonalSalaDato("123", "Pepe Sala", "1234", "SALA");
+            BD.TablaPersonal.Add(pepe); 
+            BD.TablaPersonalSala.Add(pepe); 
 
-            // -----------------------
 
+            var ana = new PersonalAdquisicionesDato("456", "Ana Adq", "4567", "ADQUISICIONES");
+            BD.TablaPersonal.Add(ana);
+            BD.TablaPersonalAdquisiciones.Add(ana);
+
+            //Para FAltaPrestamo
+            BD.TablaUsuario.Add(new UsuarioDato("111", "Juan Lector"));
+            var libro = new LibroDato("555", "El Quijote", "Cervantes", "Planeta", 1605, "789");
+            BD.TablaDocumento.Add(libro);
+            BD.TablaEjemplar.Add(new EjemplarDato(new Persistencia.Claves.ClaveEjemplar("555", "C1"), true, "789"));
 
             Application.Run(new FLogin());
         }

@@ -25,5 +25,29 @@ namespace Presentacion
         {
 
         }
+
+        private void btnAltaDocumento_Click(object sender, EventArgs e)
+        {
+            // FAltaDocumento ventana = new FAltaDocumento(this.adq);
+            // ventana.ShowDialog();
+            MessageBox.Show("Abriendo Alta de Documentos...");
+        }
+
+        private void btnAltaEjemplar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Abriendo Alta de Ejemplares...");
+
+        }
+
+        private void btnBajaEjemplar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGestionUsuarios_Click(object sender, EventArgs e)
+        {
+            FGestionUsuarios ventana = new FGestionUsuarios(this.adq);
+            ventana.ShowDialog();
+        }
     }
 }

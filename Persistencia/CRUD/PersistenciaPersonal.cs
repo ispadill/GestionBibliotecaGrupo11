@@ -58,7 +58,7 @@ namespace Persistencia.CRUD
         {
             foreach (var dato in BD.TablaPersonal)
             {
-                if (dato.Nombre == username && dato.Contrasena == password)
+                if (dato.Id == username && dato.Contrasena == password)
                 {
                     return TransformersPersonal.DatoAPersonal(dato);
                 }

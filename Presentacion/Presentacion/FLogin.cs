@@ -43,7 +43,9 @@ namespace Presentacion
                 if (objetoLogica is LNPersonalSala lnSala)
                 {
                     FMenuSala menu = new FMenuSala(lnSala);
+                    menu.FormClosed += (s, args) => this.Show();
                     menu.Show();
+                    this.Hide();
                 }
                 else if (objetoLogica is LNPersonalAdquisiciones lnAdq)
                 {

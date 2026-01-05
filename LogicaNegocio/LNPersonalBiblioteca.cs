@@ -33,5 +33,17 @@ namespace LogicaNegocio
             }
             return null;
         }
+
+        public void AltaUsuario(string dni, string nombre)
+        {
+            if (string.IsNullOrEmpty(dni) || string.IsNullOrEmpty(nombre))
+                throw new Exception("El DNI y el Nombre son obligatorios.");
+
+            Usuario nuevo = new Usuario(dni, nombre);
+            Persistencia.CRUD.PersistenciaUsuario.CREATE(nuevo);
+        }
+
+
+
     }
 }
