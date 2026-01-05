@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Persistencia.Claves
 {
-    internal class ClaveEjemplar : IEquatable<ClaveEjemplar>
+    public class ClaveEjemplar : IEquatable<ClaveEjemplar>
     {
         public string ISBN { get; }
         public string Codigo { get; }
@@ -30,9 +30,15 @@ namespace Persistencia.Claves
             return Equals(obj as ClaveEjemplar);
         }
 
-        public override int GetHashCode() // redefinido el getHashCode
+        public override int GetHashCode()
         {
-            return HashCode.Combine(ISBN, Codigo);
+            unchecked 
+            {
+                int hash = 17;
+                hash = hash * 23 + (ISBN != null ? ISBN.GetHashCode() : 0);
+                hash = hash * 23 + (Codigo != null ? Codigo.GetHashCode() : 0);
+                return hash;
+            }
         }
     }
 }

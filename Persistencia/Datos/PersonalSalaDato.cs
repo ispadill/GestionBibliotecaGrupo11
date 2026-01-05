@@ -1,6 +1,6 @@
 ﻿namespace Persistencia.Datos
 {
-    internal class PersonalSalaDato : PersonalDato
+    public class PersonalSalaDato : PersonalDato
     {
         public PersonalSalaDato(string nss, string nombre, string contrasena, string rol)
             : base(nss, nombre, contrasena, rol)

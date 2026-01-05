@@ -1,6 +1,6 @@
 ﻿namespace Persistencia.Datos
 {
-    internal class UsuarioDato : Entity<string>
+    public class UsuarioDato : Entity<string>
     {
         public string Nombre { get; set; }
 

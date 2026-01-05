@@ -1,6 +1,8 @@
-﻿namespace Persistencia.Datos
+﻿using System;
+
+namespace Persistencia.Datos
 {
-    internal class PrestamoDato : Entity<int>
+    public class PrestamoDato : Entity<int>
     {
         public DateTime FInicio { get; set; }
         public DateTime FFin { get; set; }

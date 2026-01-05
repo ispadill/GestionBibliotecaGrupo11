@@ -1,6 +1,6 @@
 ﻿namespace Persistencia.Datos
 {
-    internal class AudiolibroDato : DocumentoDato
+    public class AudiolibroDato : DocumentoDato
     {
         public string Formato { get; set; }
         public int Duracion { get; set; }

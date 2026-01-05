@@ -3,7 +3,7 @@ using Persistencia.Datos;
 
 namespace Persistencia
 {
-    internal static class BD
+    public static class BD
     {
         // DOCUMENTO
         private static Tabla<string, DocumentoDato> tablaDocumento;

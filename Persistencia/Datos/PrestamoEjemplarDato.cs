@@ -1,8 +1,9 @@
 ﻿using Persistencia.Claves;
+using System;
 
 namespace Persistencia.Datos
 {
-    internal class PrestamoEjemplarDato : Entity<ClavePrestamoEjemplar>
+    public class PrestamoEjemplarDato : Entity<ClavePrestamoEjemplar>
     {
         public DateTime FDevolucion { get; set; }
 

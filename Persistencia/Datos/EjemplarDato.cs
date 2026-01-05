@@ -2,7 +2,7 @@
 
 namespace Persistencia.Datos
 {
-    internal class EjemplarDato : Entity<ClaveEjemplar>
+    public class EjemplarDato : Entity<ClaveEjemplar>
     {
         public bool Estado { get; set; }
         public string NSS { get; set; } // CE:Personal

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A05D5E6-C021-4DF3-A233-6D02CB2E4B6B}</ProjectGuid>
+    <ProjectGuid>{96755342-CF30-408F-A803-275DA0B65713}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentacion</RootNamespace>
     <AssemblyName>Presentacion</AssemblyName>
@@ -52,8 +52,29 @@
     <Compile Include="FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FMenuAdquisiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuAdquisiciones.Designer.cs">
+      <DependentUpon>FMenuAdquisiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMenuSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuSala.Designer.cs">
+      <DependentUpon>FMenuSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuAdquisiciones.resx">
+      <DependentUpon>FMenuAdquisiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuSala.resx">
+      <DependentUpon>FMenuSala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,13 +98,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ModeloDominio.csproj">
+    <ProjectReference Include="..\..\ClassLibrary1\ModeloDominio.csproj">
       <Project>{5a5ce235-49e6-443d-9a6c-ed15762a66da}</Project>
       <Name>ModeloDominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+    <ProjectReference Include="..\..\LogicaNegocio\LogicaNegocio.csproj">
       <Project>{fb9e2e12-785b-4a51-958b-148d81fe9a63}</Project>
       <Name>LogicaNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Persistencia\Persistencia.csproj">
+      <Project>{4e804f5d-6137-470b-a440-b72ed6e58701}</Project>
+      <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
