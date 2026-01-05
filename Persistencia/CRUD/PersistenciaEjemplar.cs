@@ -13,7 +13,7 @@ namespace Persistencia.CRUD
         {
             EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);
             ed.NSS = nssPersonal;
-            ed.Estado = true; 
+            ed.Estado = false; 
 
             if (!BD.TablaEjemplar.Contains(ed.Id))
                 BD.TablaEjemplar.Add(ed);
@@ -51,6 +51,14 @@ namespace Persistencia.CRUD
                 ed.NSS = BD.TablaEjemplar[ed.Id].NSS;
                 BD.TablaEjemplar.Remove(ed.Id);
                 BD.TablaEjemplar.Add(ed);
+            }
+        }
+        public static void DELETE(Ejemplar e)
+        {
+            EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);
+            if (BD.TablaEjemplar.Contains(ed.Id))
+            {
+                BD.TablaEjemplar.Remove(ed.Id);
             }
         }
     }

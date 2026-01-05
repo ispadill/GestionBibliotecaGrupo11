@@ -44,5 +44,24 @@ namespace LogicaNegocio
             Ejemplar ej = new Ejemplar(codigo, false, doc);
             PersistenciaEjemplar.CREATE(ej, pAdq.NSS);
         }
+
+        public void BajaEjemplar(string isbn, string codigo)
+        {
+            Ejemplar ej = PersistenciaEjemplar.READ(isbn, codigo);
+            if (ej == null) throw new Exception("El ejemplar no existe.");
+
+            // En una baja lógica, podrías borrarlo de la tabla activa o marcarlo como inactivo
+            // Usamos el DELETE de tu persistencia
+            PersistenciaEjemplar.DELETE(ej);
+        }
+        public int ConsultarDisponibilidad(string isbn)
+        {
+            List<Ejemplar> disponibles = PersistenciaEjemplar.READ_DISPONIBLES(isbn);
+            return disponibles.Count;
+        }
+
+
+
+
     }
 }

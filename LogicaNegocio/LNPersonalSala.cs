@@ -20,17 +20,39 @@ namespace LogicaNegocio
         public void AltaPrestamo(int idPrestamo, string dniUsuario, List<Ejemplar> ejemplares)
         {
             Usuario u = BuscarUsuario(dniUsuario);
-            if(u == null)
+            if (u == null)
             {
                 throw new Exception("El usuario no existe.");
             }
-            if(ejemplares == null || ejemplares.Count == 0)
+            if (ejemplares == null || ejemplares.Count == 0)
             {
-                throw new Exception("Debes seleccionar un ejemplar.");
+                throw new Exception("Debes seleccionar al menos un ejemplar.");
             }
+
             DateTime inicio = DateTime.Now;
-            DateTime fin = inicio.AddDays(15);
+
+            int dias = ejemplares.Any(e => e.Documento is AudioLibro) ? 10 : 15;
+            DateTime fin = inicio.AddDays(dias);
+
             Prestamo prestamo = new Prestamo(idPrestamo, u, pSala, inicio, fin, EstadoPrestamo.EN_PROCESO);
+
+     
+            foreach (var ej in ejemplares)
+            {
+                prestamo.Ejemplares.Add(ej);
+            }
+
+            PersistenciaPrestamo.CREATE(prestamo);
+        }
+
+        public void DevolverEjemplar(string isbn, string codigo)
+        {
+            Ejemplar ej = PersistenciaEjemplar.READ(isbn, codigo);
+            if (ej != null)
+            {
+                ej.marcarPrestado(false);
+                PersistenciaEjemplar.UPDATE(ej);
+            }
         }
         public Prestamo BuscarPrestamo(int id)
         {
