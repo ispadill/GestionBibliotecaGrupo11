@@ -53,5 +53,11 @@ namespace Presentacion
         {
             new FConsultaDisponibilidad(this.adq).ShowDialog();
         }
+
+        private void btnVerCatalogo_Click(object sender, EventArgs e)
+        {
+            FListadoDocumentos ventana = new FListadoDocumentos();
+            ventana.ShowDialog();
+        }
     }
 }

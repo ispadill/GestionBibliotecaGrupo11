@@ -33,6 +33,7 @@
             this.btnBajaEjemplar = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
+            this.btnVerCatalogo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAltaDocumento
@@ -85,11 +86,22 @@
             this.btnStock.UseVisualStyleBackColor = true;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
+            // btnVerCatalogo
+            // 
+            this.btnVerCatalogo.Location = new System.Drawing.Point(271, 221);
+            this.btnVerCatalogo.Name = "btnVerCatalogo";
+            this.btnVerCatalogo.Size = new System.Drawing.Size(104, 53);
+            this.btnVerCatalogo.TabIndex = 5;
+            this.btnVerCatalogo.Text = "Ver Catálogo";
+            this.btnVerCatalogo.UseVisualStyleBackColor = true;
+            this.btnVerCatalogo.Click += new System.EventHandler(this.btnVerCatalogo_Click);
+            // 
             // FMenuAdquisiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVerCatalogo);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnGestionUsuarios);
             this.Controls.Add(this.btnBajaEjemplar);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button btnBajaEjemplar;
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Button btnVerCatalogo;
     }
 }

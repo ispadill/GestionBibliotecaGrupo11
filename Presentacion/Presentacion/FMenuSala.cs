@@ -52,5 +52,10 @@ namespace Presentacion
         {
 
         }
+
+        private void btnMisPrestamos_Click(object sender, EventArgs e)
+        {
+            new FConsultaPrestamosUsuario(this.sala).ShowDialog();
+        }
     }
 }

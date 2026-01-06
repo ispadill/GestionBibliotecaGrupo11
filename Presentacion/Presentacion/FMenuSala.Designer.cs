@@ -32,6 +32,7 @@
             this.btnDevolucion = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnMisPrestamos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNuevoPrestamo
@@ -74,11 +75,23 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
+            // btnMisPrestamos
+            // 
+            this.btnMisPrestamos.Location = new System.Drawing.Point(163, 227);
+            this.btnMisPrestamos.Name = "btnMisPrestamos";
+            this.btnMisPrestamos.Size = new System.Drawing.Size(115, 45);
+            this.btnMisPrestamos.TabIndex = 4;
+            this.btnMisPrestamos.Text = "Ver Mis Préstamos";
+            this.btnMisPrestamos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMisPrestamos.UseVisualStyleBackColor = true;
+            this.btnMisPrestamos.Click += new System.EventHandler(this.btnMisPrestamos_Click);
+            // 
             // FMenuSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMisPrestamos);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnGestionUsuarios);
             this.Controls.Add(this.btnDevolucion);
@@ -96,5 +109,6 @@
         private System.Windows.Forms.Button btnDevolucion;
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnMisPrestamos;
     }
 }

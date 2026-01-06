@@ -76,6 +76,12 @@
     <Compile Include="FConsultaDisponibilidad.Designer.cs">
       <DependentUpon>FConsultaDisponibilidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="FConsultaPrestamosUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsultaPrestamosUsuario.Designer.cs">
+      <DependentUpon>FConsultaPrestamosUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDevolucion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="FGestionUsuarios.Designer.cs">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FListadoDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FListadoDocumentos.Designer.cs">
+      <DependentUpon>FListadoDocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -123,11 +135,17 @@
     <EmbeddedResource Include="FConsultaDisponibilidad.resx">
       <DependentUpon>FConsultaDisponibilidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FConsultaPrestamosUsuario.resx">
+      <DependentUpon>FConsultaPrestamosUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDevolucion.resx">
       <DependentUpon>FDevolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGestionUsuarios.resx">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FListadoDocumentos.resx">
+      <DependentUpon>FListadoDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>

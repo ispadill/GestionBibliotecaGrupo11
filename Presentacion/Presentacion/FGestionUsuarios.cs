@@ -61,5 +61,22 @@ namespace Presentacion
                 lstUsuarios.Items.Add(u.Dni + " - " + u.Nombre);
             }
         }
+
+        private void btnBajaUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                string seleccionado = lstUsuarios.SelectedItem?.ToString();
+                if (seleccionado == null) return;
+
+                string dni = seleccionado.Split('-')[0].Trim();
+
+                logica.BajaUsuario(dni);
+                MessageBox.Show("Usuario eliminado.");
+                ActualizarLista();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 }

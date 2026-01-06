@@ -49,6 +49,14 @@ namespace LogicaNegocio
             Persistencia.CRUD.PersistenciaUsuario.CREATE(nuevo);
         }
 
+        //PRE: El dni debe existir previamente en la base de datos y no ser nulo.
+        //POST: Se elimina el Usuario asociado al dni de la base de datos. Si el dni está vacío, lanza una Excepción.
+        public void BajaUsuario(string dni)
+        {
+            if (string.IsNullOrEmpty(dni)) throw new Exception("Selecciona un usuario.");
+            Persistencia.CRUD.PersistenciaUsuario.DELETE(dni); 
+        }
+
 
 
     }

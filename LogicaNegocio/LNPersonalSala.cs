@@ -78,5 +78,20 @@ namespace LogicaNegocio
         {
             return PersistenciaEjemplar.READ_DISPONIBLES(isbn);
         }
+
+        //PRE: El dni debe corresponder a un usuario registrado.
+        //POST: Devuelve una lista de strings con la información de los préstamos activos (Estado = false). Si no hay préstamos, devuelve una lista vacía.
+        public List<string> ConsultarPrestamosActivos(string dni)
+        {
+            List<string> lista = new List<string>();
+            foreach (var p in Persistencia.BD.TablaPrestamo)
+            {
+                if (p.DNI == dni && p.Estado == false) // false = En proceso [cite: 151]
+                {
+                    lista.Add($"Préstamo #{p.Id} - Vence: {p.FFin.ToShortDateString()}");
+                }
+            }
+            return lista;
+        }
     }
 }
