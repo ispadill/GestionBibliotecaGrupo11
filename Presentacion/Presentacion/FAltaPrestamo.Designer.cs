@@ -106,6 +106,7 @@
             this.Controls.Add(this.txtDniUsuario);
             this.Name = "FAltaPrestamo";
             this.Text = "FAltaPrestamo";
+            this.Load += new System.EventHandler(this.FAltaPrestamo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

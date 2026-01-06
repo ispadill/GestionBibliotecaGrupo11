@@ -32,6 +32,7 @@
             this.btnAltaEjemplar = new System.Windows.Forms.Button();
             this.btnBajaEjemplar = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAltaDocumento
@@ -74,11 +75,22 @@
             this.btnGestionUsuarios.UseVisualStyleBackColor = true;
             this.btnGestionUsuarios.Click += new System.EventHandler(this.btnGestionUsuarios_Click);
             // 
+            // btnStock
+            // 
+            this.btnStock.Location = new System.Drawing.Point(104, 221);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(116, 53);
+            this.btnStock.TabIndex = 4;
+            this.btnStock.Text = "Stock (Disponibilidad)";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
             // FMenuAdquisiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnGestionUsuarios);
             this.Controls.Add(this.btnBajaEjemplar);
             this.Controls.Add(this.btnAltaEjemplar);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button btnAltaEjemplar;
         private System.Windows.Forms.Button btnBajaEjemplar;
         private System.Windows.Forms.Button btnGestionUsuarios;
+        private System.Windows.Forms.Button btnStock;
     }
 }

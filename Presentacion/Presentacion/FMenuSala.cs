@@ -39,7 +39,7 @@ namespace Presentacion
 
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Abriendo Devoluciones...");
+            new FDevolucion(this.sala).ShowDialog();
         }
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)

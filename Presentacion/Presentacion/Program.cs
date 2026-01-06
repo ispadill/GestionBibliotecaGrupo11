@@ -31,6 +31,9 @@ namespace Presentacion
 
             //Para FAltaPrestamo
             BD.TablaUsuario.Add(new UsuarioDato("111", "Juan Lector"));
+            BD.TablaUsuario.Add(new UsuarioDato("000", "Ismael"));
+            BD.TablaUsuario.Add(new UsuarioDato("678", "Hugo"));
+            BD.TablaUsuario.Add(new UsuarioDato("400", "Francisco"));
             var libro = new LibroDato("555", "El Quijote", "Cervantes", "Planeta", 1605, "789");
             BD.TablaDocumento.Add(libro);
             BD.TablaEjemplar.Add(new EjemplarDato(new Persistencia.Claves.ClaveEjemplar("555", "C1"), true, "789"));

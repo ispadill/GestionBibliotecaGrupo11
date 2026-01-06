@@ -77,5 +77,10 @@ namespace Presentacion
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void FAltaPrestamo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
