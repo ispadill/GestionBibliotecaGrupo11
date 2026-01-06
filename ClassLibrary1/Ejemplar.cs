@@ -22,7 +22,8 @@ namespace ClassLibrary1
         public String Codigo { get { return codigo; } set { codigo = value;  } }
         public bool Prestado { get { return prestado; } } 
         public Documento Documento { get { return documento; } set { documento = value; } }
-
+        //PRE: -
+        //POST: La propiedad prestado se actualiza con el valor dado
         public void marcarPrestado(bool prestado)
         {
             this.prestado = prestado;

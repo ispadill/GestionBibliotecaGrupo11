@@ -5,6 +5,8 @@ namespace Persistencia.Transformers
 {
     internal static class TransformersPersonal
     {
+        //PRE: p no es nulo.
+        //POST: Devuelve el EjemplarDato correspondiente al PersonalBiblioteca.
         public static PersonalDato PersonalADato(PersonalBiblioteca p)
         {
             if (p is PersonalSala ps)
@@ -17,7 +19,8 @@ namespace Persistencia.Transformers
             }
             return null;
         }
-
+        //PRE: pd no es nulo.
+        //POST: Devuelve una instancia completa de Personal.
         public static PersonalBiblioteca DatoAPersonal(PersonalDato pd)
         {
             if (pd is PersonalSalaDato)

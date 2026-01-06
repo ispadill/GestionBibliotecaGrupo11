@@ -9,6 +9,8 @@ namespace Persistencia.CRUD
 {
     public static class PersistenciaEjemplar
     {
+        //PRE: e no es nulo. La clave compuesta (ISBN, Codigo) no debe existir en BD.TablaEjemplar.
+        //POST: El ejemplar e es añadido a BD.TablaEjemplar. Lanza excepción si ya existe.
         public static void CREATE(Ejemplar e, string nssPersonal)
         {
             EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);
@@ -20,7 +22,8 @@ namespace Persistencia.CRUD
             else
                 throw new Exception("El ejemplar ya existe.");
         }
-
+        //PRE: -
+        //POST: Devuelve el Ejemplar si la clave existe, null si no.
         public static Ejemplar READ(string isbn, string codigo)
         {
             ClaveEjemplar clave = new ClaveEjemplar(isbn, codigo);
@@ -28,7 +31,8 @@ namespace Persistencia.CRUD
                 return TransformersEjemplar.DatoAEjemplar(BD.TablaEjemplar[clave]);
             return null;
         }
-
+        //PRE: isbn no es nulo.
+        //POST: Devuelve una lista de Ejemplar filtrada donde ISBN coincide y Estado es true.
         public static List<Ejemplar> READ_DISPONIBLES(string isbn)
         {
             List<Ejemplar> disponibles = new List<Ejemplar>();
@@ -41,7 +45,6 @@ namespace Persistencia.CRUD
             }
             return disponibles;
         }
-
         public static void UPDATE(Ejemplar e)
         {
             EjemplarDato ed = TransformersEjemplar.EjemplarADato(e);

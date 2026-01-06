@@ -17,6 +17,17 @@ namespace LogicaNegocio
             this.p = pSala;
             this.pSala = pSala;
         }
+        /*PRE:
+         * idPrestamo debe ser único
+         * dniUsuario debe corresponder a un usuario existente en la base de datos.
+         * ejemplares debe ser una lista inicializada y contener al menos un elemento.
+         * Los ejemplares en la lista deben estar disponibles
+         */
+        /*POST:
+         * Se crea y almacena un nuevo objeto Prestamo en la base de datos.
+         * El estado de los ejemplares involucrados se actualiza a Prestado = true
+         * Se define la fecha de fin (devolución) calculando 10 días si hay audiolibros o 15 días si son solo libros.
+         */
         public void AltaPrestamo(int idPrestamo, string dniUsuario, List<Ejemplar> ejemplares)
         {
             Usuario u = BuscarUsuario(dniUsuario);
@@ -44,7 +55,8 @@ namespace LogicaNegocio
 
             PersistenciaPrestamo.CREATE(prestamo);
         }
-
+        //PRE: -
+        //POST: POST: Si el ejemplar existe, su estado se actualiza a Prestado = false. Si no existe, no realiza ninguna acción.
         public void DevolverEjemplar(string isbn, string codigo)
         {
             Ejemplar ej = PersistenciaEjemplar.READ(isbn, codigo);
@@ -54,10 +66,14 @@ namespace LogicaNegocio
                 PersistenciaEjemplar.UPDATE(ej);
             }
         }
+        //PRE: -
+        //POST: Devuelve el objeto Prestamo correspondiente al ID, o null si no existe.
         public Prestamo BuscarPrestamo(int id)
         {
             return PersistenciaPrestamo.READ(id);
         }
+        //PRE: -
+        //POST: Devuelve una lista de objetos Ejemplar asociados a ese ISBN cuyo estado sea no prestado.
         public List<Ejemplar> BuscarEjemplaresDisponibles(string isbn)
         {
             return PersistenciaEjemplar.READ_DISPONIBLES(isbn);

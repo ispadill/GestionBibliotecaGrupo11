@@ -9,6 +9,8 @@ namespace Persistencia.CRUD
 {
     public static class PersistenciaPrestamo
     {
+        //PRE: p.Id no debe existir en BD.TablaPrestamo.
+        //POST: Se guarda una entrada en BD.TablaPrestamoEjemplar por cada ejemplar.
         public static void CREATE(Prestamo p)
         {
             PrestamoDato pd = TransformersPrestamo.PrestamoADato(p);

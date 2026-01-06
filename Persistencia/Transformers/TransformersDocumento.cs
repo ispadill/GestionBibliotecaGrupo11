@@ -10,6 +10,8 @@ namespace Persistencia.Transformers
 {
     internal static class TransformersDocumento
     {
+        //PRE: doc no es nulo.
+        //POST: Devuelve el EjemplarDato correspondiente al Documento doc.
         public static DocumentoDato DocumentoADato(Documento doc)
         {
             if (doc is Libro libro)
@@ -22,7 +24,8 @@ namespace Persistencia.Transformers
             }
             return null;
         }
-
+        //PRE: dd no es nulo.
+        //POST: Devuelve una instancia completa de Documento.
         public static Documento DatoADocumento(DocumentoDato dd)
         {
             if (dd is LibroDato ld)

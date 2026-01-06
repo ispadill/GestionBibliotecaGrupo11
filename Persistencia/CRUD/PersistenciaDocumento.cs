@@ -11,7 +11,8 @@ namespace Persistencia.CRUD
 {
     public static class PersistenciaDocumento
     {
-        // -------------------- CREATE --------------------
+        //PRE: doc no es nulo.
+        //POST: El documento es añadido a BD.TablaDocumento.
         public static void CREATE(Documento doc, string nss)
         {
             DocumentoDato dd = TransformersDocumento.DocumentoADato(doc);
@@ -20,7 +21,8 @@ namespace Persistencia.CRUD
             BD.TablaDocumento.Add(dd);
         }
 
-        // -------------------- UPDATE --------------------
+        //PRE: doc no es nulo.
+        //POST: Se actualizan los datos del documento en la tabla, manteniendo el NSS original.
         public static void UPDATE(Documento doc)
         {
             DocumentoDato dd = TransformersDocumento.DocumentoADato(doc);
@@ -44,7 +46,8 @@ namespace Persistencia.CRUD
             }
         }
 
-        // -------------------- READ --------------------
+        //PRE: isbn no es nulo.
+        //POST: Devuelve el objeto Documento reconstituido desde DocumentoDato si existe, o null.
         public static Documento READ(string isbn)
         {
             if (BD.TablaDocumento.Contains(isbn))

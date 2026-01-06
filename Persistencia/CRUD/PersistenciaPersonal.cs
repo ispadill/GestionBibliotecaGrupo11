@@ -53,7 +53,8 @@ namespace Persistencia.CRUD
                 BD.TablaPersonal.Remove(p.NSS);
             }
         }
-
+        //PRE: username y password no nulos.
+        //POST: Busca en BD.TablaPersonal. Si encuentra coincidencia exacta de ID y contraseña, devuelve el objeto PersonalBiblioteca. Si no, null.
         public static PersonalBiblioteca LOGIN(string username, string password)
         {
             foreach (var dato in BD.TablaPersonal)
