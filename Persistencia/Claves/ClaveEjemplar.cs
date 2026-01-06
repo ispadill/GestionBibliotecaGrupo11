@@ -25,7 +25,7 @@ namespace Persistencia.Claves
                    Codigo == other.Codigo;
         }
 
-        public override bool Equals(object obj) //tengo duda de si esto esta bien
+        public override bool Equals(object obj) 
         {
             return Equals(obj as ClaveEjemplar);
         }

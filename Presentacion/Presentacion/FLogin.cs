@@ -27,19 +27,15 @@ namespace Presentacion
         {
             try
             {
-                // Llamamos a tu lógica de inicio de sesión
                 var objetoLogica = LNPersonalBiblioteca.IniciarSesion(txtUsuario.Text, txtPassword.Text);
 
 
-                // Pruebaaa
-                MessageBox.Show("Has escrito: " + txtUsuario.Text + " y " + txtPassword.Text);
                 if (objetoLogica == null)
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos.");
                     return;
                 }
 
-                // Abrimos el menú según el rol
                 if (objetoLogica is LNPersonalSala lnSala)
                 {
                     FMenuSala menu = new FMenuSala(lnSala);
@@ -53,7 +49,7 @@ namespace Presentacion
                     menu.Show();
                 }
 
-                this.Hide(); // Ocultamos el login
+                this.Hide();
             }
             catch (Exception ex)
             {

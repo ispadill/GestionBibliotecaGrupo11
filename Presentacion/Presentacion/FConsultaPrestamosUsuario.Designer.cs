@@ -55,9 +55,9 @@
             // 
             this.lstPrestamos.FormattingEnabled = true;
             this.lstPrestamos.ItemHeight = 16;
-            this.lstPrestamos.Location = new System.Drawing.Point(170, 120);
+            this.lstPrestamos.Location = new System.Drawing.Point(135, 120);
             this.lstPrestamos.Name = "lstPrestamos";
-            this.lstPrestamos.Size = new System.Drawing.Size(232, 100);
+            this.lstPrestamos.Size = new System.Drawing.Size(298, 132);
             this.lstPrestamos.TabIndex = 2;
             // 
             // label1

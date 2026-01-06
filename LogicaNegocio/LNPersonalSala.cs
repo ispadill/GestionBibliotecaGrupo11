@@ -93,5 +93,26 @@ namespace LogicaNegocio
             }
             return lista;
         }
+
+        //PRE: La base de datos de préstamos debe estar accesible.
+        //POST: Devuelve una lista de strings con los datos de préstamos cuyo Estado es "false" y su fecha de fin es anterior a la fecha actual.
+        public List<string> ConsultarPrestamosFueraDePlazo()
+        {
+            List<string> lista = new List<string>();
+            DateTime hoy = DateTime.Today;
+
+            foreach (var p in Persistencia.BD.TablaPrestamo)
+            {
+                if (p.Estado == false && p.FFin < hoy)
+                {
+                    lista.Add($"Retraso -> DNI: {p.DNI} (Venció: {p.FFin.ToShortDateString()})");
+                }
+            }
+            return lista;
+        }
+
+
+        
+
     }
 }

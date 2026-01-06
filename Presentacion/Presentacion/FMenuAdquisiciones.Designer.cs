@@ -34,6 +34,7 @@
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnVerCatalogo = new System.Windows.Forms.Button();
+            this.btnMasLeido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAltaDocumento
@@ -96,11 +97,22 @@
             this.btnVerCatalogo.UseVisualStyleBackColor = true;
             this.btnVerCatalogo.Click += new System.EventHandler(this.btnVerCatalogo_Click);
             // 
+            // btnMasLeido
+            // 
+            this.btnMasLeido.Location = new System.Drawing.Point(415, 221);
+            this.btnMasLeido.Name = "btnMasLeido";
+            this.btnMasLeido.Size = new System.Drawing.Size(106, 53);
+            this.btnMasLeido.TabIndex = 6;
+            this.btnMasLeido.Text = "Libro mas leido";
+            this.btnMasLeido.UseVisualStyleBackColor = true;
+            this.btnMasLeido.Click += new System.EventHandler(this.btnMasLeido_Click);
+            // 
             // FMenuAdquisiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMasLeido);
             this.Controls.Add(this.btnVerCatalogo);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnGestionUsuarios);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnVerCatalogo;
+        private System.Windows.Forms.Button btnMasLeido;
     }
 }

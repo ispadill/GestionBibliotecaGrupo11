@@ -94,6 +94,12 @@
     <Compile Include="FGestionUsuarios.Designer.cs">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FInformeExito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInformeExito.Designer.cs">
+      <DependentUpon>FInformeExito.cs</DependentUpon>
+    </Compile>
     <Compile Include="FListadoDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FGestionUsuarios.resx">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInformeExito.resx">
+      <DependentUpon>FInformeExito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FListadoDocumentos.resx">
       <DependentUpon>FListadoDocumentos.cs</DependentUpon>
