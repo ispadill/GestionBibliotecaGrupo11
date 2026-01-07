@@ -64,7 +64,6 @@ namespace Presentacion
         {
             try
             {
-                // generamos un ID aleatorio para el prestamo por ahora
                 int id = new Random().Next(1, 10000);
 
                 sala.AltaPrestamo(id, txtDniUsuario.Text, listaParaPrestamo);

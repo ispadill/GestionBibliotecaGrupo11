@@ -35,7 +35,6 @@ namespace Persistencia.CRUD
             }
         }
 
-        // -------------------- DELETE --------------------
         public static void DELETE(Documento doc)
         {
             DocumentoDato dd = TransformersDocumento.DocumentoADato(doc);

@@ -52,13 +52,17 @@ namespace Presentacion
         }
         private void cbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Si seleccionas Audiolibro, mostramos los campos. Si no, los ocultamos.
             bool esAudio = (cbTipo.Text == "Audiolibro");
 
             txtFormato.Visible = esAudio;
             txtDuracion.Visible = esAudio;
             label6.Visible = esAudio; 
             label7.Visible = esAudio;
+        }
+
+        private void FAltaDocumento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

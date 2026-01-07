@@ -15,7 +15,6 @@ namespace Presentacion
     {
         private LNPersonalSala sala;
 
-        // Constructor para recibir el objeto de lógica
         public FMenuSala(LNPersonalSala objetoLogica)
         {
             InitializeComponent();

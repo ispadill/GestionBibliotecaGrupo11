@@ -22,13 +22,17 @@ namespace Presentacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            // Usamos el método de la lógica
             int cantidad = adq.ConsultarDisponibilidad(txtIsbn.Text);
 
             if (cantidad > 0)
                 lblResultado.Text = "Hay " + cantidad + " ejemplares libres.";
             else
                 lblResultado.Text = "No hay ejemplares disponibles ahora.";
+        }
+
+        private void FConsultaDisponibilidad_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

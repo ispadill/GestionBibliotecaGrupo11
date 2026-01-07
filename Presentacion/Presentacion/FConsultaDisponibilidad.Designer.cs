@@ -79,6 +79,7 @@
             this.Controls.Add(this.txtIsbn);
             this.Name = "FConsultaDisponibilidad";
             this.Text = "FConsultaDisponibilidad";
+            this.Load += new System.EventHandler(this.FConsultaDisponibilidad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

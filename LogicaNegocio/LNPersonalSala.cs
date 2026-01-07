@@ -86,7 +86,7 @@ namespace LogicaNegocio
             List<string> lista = new List<string>();
             foreach (var p in Persistencia.BD.TablaPrestamo)
             {
-                if (p.DNI == dni && p.Estado == false) // false = En proceso [cite: 151]
+                if (p.DNI == dni && p.Estado == false)
                 {
                     lista.Add($"Préstamo #{p.Id} - Vence: {p.FFin.ToShortDateString()}");
                 }

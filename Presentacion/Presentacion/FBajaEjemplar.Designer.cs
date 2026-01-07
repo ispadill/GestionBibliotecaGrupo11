@@ -89,6 +89,7 @@
             this.Controls.Add(this.btnBaja);
             this.Name = "FBajaEjemplar";
             this.Text = "FBajaEjemplar";
+            this.Load += new System.EventHandler(this.FBajaEjemplar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

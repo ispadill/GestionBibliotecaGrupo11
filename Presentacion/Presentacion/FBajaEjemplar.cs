@@ -24,7 +24,6 @@ namespace Presentacion
         {
             try
             {
-                // La lógica realiza una "baja lógica"
                 adq.BajaEjemplar(txtIsbn.Text, txtCodigoEjemplar.Text);
 
                 MessageBox.Show("Ejemplar dado de baja.");
@@ -34,6 +33,11 @@ namespace Presentacion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void FBajaEjemplar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

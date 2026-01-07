@@ -8,7 +8,6 @@ namespace Persistencia.CRUD
 {
     public static class PersistenciaPersonal
     {
-        // ------------------- CREATE -------------------
         public static void CREATE(PersonalBiblioteca p)
         {
             PersonalDato pd = TransformersPersonal.PersonalADato(p);
@@ -22,7 +21,6 @@ namespace Persistencia.CRUD
             }
         }
 
-        // ------------------- READ -------------------
         public static PersonalBiblioteca READ(string nss)
         {
             if (BD.TablaPersonal.Contains(nss))
@@ -30,7 +28,6 @@ namespace Persistencia.CRUD
             return null;
         }
 
-        // ------------------- UPDATE -------------------
         public static void UPDATE(PersonalBiblioteca p)
         {
             if (BD.TablaPersonal.Contains(p.NSS))
@@ -45,7 +42,6 @@ namespace Persistencia.CRUD
             }
         }
 
-        // ------------------- DELETE -------------------
         public static void DELETE(PersonalBiblioteca p)
         {
             if (BD.TablaPersonal.Contains(p.NSS))
