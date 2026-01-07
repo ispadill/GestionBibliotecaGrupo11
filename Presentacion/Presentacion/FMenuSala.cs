@@ -57,5 +57,11 @@ namespace Presentacion
         {
             new FConsultaPrestamosUsuario(this.sala).ShowDialog();
         }
+
+        private void btnAtrasados_Click(object sender, EventArgs e)
+        {
+            FPrestamosAtrasados ventana = new FPrestamosAtrasados(this.sala);
+            ventana.ShowDialog();
+        }
     }
 }

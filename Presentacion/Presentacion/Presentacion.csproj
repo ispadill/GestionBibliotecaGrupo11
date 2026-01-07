@@ -94,12 +94,6 @@
     <Compile Include="FGestionUsuarios.Designer.cs">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInformeExito.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FInformeExito.Designer.cs">
-      <DependentUpon>FInformeExito.cs</DependentUpon>
-    </Compile>
     <Compile Include="FListadoDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +117,12 @@
     </Compile>
     <Compile Include="FMenuSala.Designer.cs">
       <DependentUpon>FMenuSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrestamosAtrasados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrestamosAtrasados.Designer.cs">
+      <DependentUpon>FPrestamosAtrasados.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,9 +150,6 @@
     <EmbeddedResource Include="FGestionUsuarios.resx">
       <DependentUpon>FGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInformeExito.resx">
-      <DependentUpon>FInformeExito.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FListadoDocumentos.resx">
       <DependentUpon>FListadoDocumentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMenuSala.resx">
       <DependentUpon>FMenuSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrestamosAtrasados.resx">
+      <DependentUpon>FPrestamosAtrasados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

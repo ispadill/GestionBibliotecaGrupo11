@@ -6,8 +6,7 @@
         public string Autor { get; set; }
         public string Editorial { get; set; }
         public int Año { get; set; }
-        public string NSS { get; set; } // CE:Personal
-
+        public string NSS { get; set; }
         public DocumentoDato(string isbn, string titulo, string autor, string editorial, int año, string nss)
             : base(isbn)
         {

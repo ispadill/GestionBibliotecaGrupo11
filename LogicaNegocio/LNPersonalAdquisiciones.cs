@@ -67,31 +67,5 @@ namespace LogicaNegocio
             return disponibles.Count;
         }
 
-        //PRE: La tabla de préstamos debe contener datos para obtener un resultado válido.
-        //POST: Devuelve un string indicando el ISBN más frecuente y su cantidad de préstamos. Si no hay datos, devuelve un mensaje informativo.
-        public string ObtenerMasLeido()
-        {
-            var recuento = new Dictionary<string, int>();
-
-            foreach (var p in Persistencia.BD.TablaPrestamo)
-            {
-                string isbn = "555"; 
-
-                if (recuento.ContainsKey(isbn)) recuento[isbn]++;
-                else recuento[isbn] = 1;
-            }
-
-            var max = recuento.OrderByDescending(x => x.Value).FirstOrDefault();
-
-            if (max.Key != null)
-                return $"El libro más leído es el ISBN: {max.Key} (Prestado {max.Value} veces)";
-
-            return "No hay préstamos registrados todavía.";
-        }
-
-        
-
-
-
     }
 }

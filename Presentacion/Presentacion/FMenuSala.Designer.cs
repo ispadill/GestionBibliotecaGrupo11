@@ -33,6 +33,7 @@
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnMisPrestamos = new System.Windows.Forms.Button();
+            this.btnAtrasados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNuevoPrestamo
@@ -57,7 +58,7 @@
             // 
             // btnGestionUsuarios
             // 
-            this.btnGestionUsuarios.Location = new System.Drawing.Point(563, 134);
+            this.btnGestionUsuarios.Location = new System.Drawing.Point(550, 134);
             this.btnGestionUsuarios.Name = "btnGestionUsuarios";
             this.btnGestionUsuarios.Size = new System.Drawing.Size(103, 45);
             this.btnGestionUsuarios.TabIndex = 2;
@@ -86,11 +87,22 @@
             this.btnMisPrestamos.UseVisualStyleBackColor = true;
             this.btnMisPrestamos.Click += new System.EventHandler(this.btnMisPrestamos_Click);
             // 
+            // btnAtrasados
+            // 
+            this.btnAtrasados.Location = new System.Drawing.Point(367, 227);
+            this.btnAtrasados.Name = "btnAtrasados";
+            this.btnAtrasados.Size = new System.Drawing.Size(108, 45);
+            this.btnAtrasados.TabIndex = 5;
+            this.btnAtrasados.Text = "Préstamos Atrasados";
+            this.btnAtrasados.UseVisualStyleBackColor = true;
+            this.btnAtrasados.Click += new System.EventHandler(this.btnAtrasados_Click);
+            // 
             // FMenuSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAtrasados);
             this.Controls.Add(this.btnMisPrestamos);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnGestionUsuarios);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnMisPrestamos;
+        private System.Windows.Forms.Button btnAtrasados;
     }
 }

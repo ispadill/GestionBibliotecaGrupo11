@@ -27,7 +27,7 @@ namespace Presentacion
             var pAdq1 = new PersonalAdquisicionesDato("456", "Ana Adq", "4567", "ADQUISICIONES");
             var pAdq2 = new PersonalAdquisicionesDato("012", "PersAdqui", "adq123", "ADQUISICIONES");
 
-
+            // Añadir a Tabla General y Específicas
             BD.TablaPersonal.Add(pSala1); BD.TablaPersonalSala.Add(pSala1);
             BD.TablaPersonal.Add(pSala2); BD.TablaPersonalSala.Add(pSala2);
             BD.TablaPersonal.Add(pAdq1); BD.TablaPersonalAdquisiciones.Add(pAdq1);
